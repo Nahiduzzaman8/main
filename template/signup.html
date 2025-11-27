@@ -10,12 +10,13 @@
       {% csrf_token %} 
       
       {% for fm in form%}
-      <label>{{ fm.label }}</label><p>:::::</p> {{ fm }}<br />
+      <label>{{ fm.label }}</label> {{ fm }}<br />
       {{ fm.errors }}
-      
-      <hr />
+
+     
       {% endfor %}
       <input type="submit" />
     </form>
+    <a href="{% url 'login' %}">Login</a>
   </body>
 </html>
